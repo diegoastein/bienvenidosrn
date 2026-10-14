@@ -1,0 +1,295 @@
+/* fuentes de google fonts (el @import debe ir primero) */
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+
+/* ========== BASE (mobile-first) ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Playpen Sans", cursive;
+    background-color: #e4d8ae;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* header y nav: apilados en mobile */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.logo {
+    width: 60%;
+    max-width: 260px;
+    height: auto;
+}
+
+.nav-ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 8px 16px;
+    padding: 10px;
+}
+
+.nav-ul li {
+    list-style: none;
+}
+
+.nav-ul li a {
+    text-decoration: none;
+    color: #091201;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 8px 0;
+    display: inline-block;
+}
+
+.nav-ul li a:hover {
+    color: #0a7786;
+}
+
+/* main: secciones apiladas al 100% del ancho */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 16px;
+    width: 100%;
+}
+
+main>section {
+    width: 100%;
+}
+
+article {
+    margin: 0;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+figcaption {
+    color: #162b03;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* tipografía */
+h1 {
+    color: #0a7786;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+h2 {
+    color: #2d701f;
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: 500;
+}
+
+p {
+    color: #162b03;
+    font-size: 1rem;
+    text-align: left;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+main ul {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* footer */
+footer {
+    padding: 16px;
+}
+
+.footer-ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.footer-ul li a {
+    text-decoration: none;
+    color: #091201;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* ========== INDEX: grid con areas (mobile = una columna) ========== */
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "hero"
+        "sobre"
+        "guias"
+        "foto";
+    gap: 20px;
+}
+
+.home-foto {
+    grid-area: foto;
+}
+
+/* ========== GUIAS: grid con areas (mobile = una columna) ========== */
+.guias-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "intro"
+        "g1"
+        "g2"
+        "g3"
+        "g4"
+        "g5"
+        "foto";
+    gap: 20px;
+}
+
+.guias-intro {
+    grid-area: intro;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.guias-foto {
+    grid-area: foto;
+}
+
+.guias-grid article {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: rgba(255, 255, 255, 0.35);
+    padding: 16px;
+    border-radius: 12px;
+}
+
+/* ======== TABLET ========== */
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 24px;
+    }
+
+    .logo {
+        width: 220px;
+    }
+
+    main {
+        padding: 24px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .home-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "hero  hero"
+            "sobre guias"
+            "foto  foto";
+    }
+
+    .home-foto img {
+        margin: 0 auto;
+        max-width: 70%;
+    }
+
+    .guias-grid {
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .footer-ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 24px;
+    }
+}
+
+/* ======== DESKTOP ========== */
+@media (min-width: 1024px) {
+    header {
+        padding: 10px 48px;
+    }
+
+    .logo {
+        width: 300px;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 32px 48px;
+        gap: 32px;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .home-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-areas:
+            "hero  hero  foto"
+            "sobre guias foto";
+        gap: 32px;
+        align-items: start;
+    }
+
+    .home-foto img {
+        max-width: 100%;
+    }
+
+    .guias-grid {
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 24px;
+    }
+
+    .guias-foto {
+        align-self: center;
+    }
+}
