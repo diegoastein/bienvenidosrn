@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Bienvenidos RN</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/logo.png" alt="Bienvenidos RN" class="logo" style="max-height: 45px;">
+                </a>
+
+                <!-- Botón hamburguesa (visible solo en móviles/tablets) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal" aria-label="Abrir menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú lateral deslizable -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="menuPrincipal"
+                    aria-labelledby="menuPrincipalLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="menuPrincipalLabel">Bienvenidos RN</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Cerrar"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/guias.html">Guías</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/preguntas-frecuentes.html">Preguntas frecuentes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/sobre-mi.html">Sobre mí</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="home-grid">
+        <section>
+            <h1>Bienvenidos RN</h1>
+            <p>Mi nombre es Diego Steinberg. Soy médico pediatra y neonatólogo desde hace más de 25 años.</p>
+        </section>
+
+        <section>
+            <h2>Sobre mí</h2>
+            <p>Me especializo en el cuidado de recién nacidos y niños pequeños, brindando atención médica de calidad y
+                apoyo a las familias.</p>
+        </section>
+
+        <section>
+            <h2>Guías</h2>
+            <ul>
+                <li>Cómo volver a casa</li>
+                <li>Cómo cuidar a tu bebé</li>
+                <li>Cómo alimentar a tu bebé</li>
+                <li>Cómo cuidar el sueño de tu bebé</li>
+                <li>Cómo cuidar la piel de tu bebé</li>
+            </ul>
+        </section>
+
+        <!--carrusel-->
+        <div id="carouselStackedBottom" class="carousel slide">
+            <div class="carousel-inner rounded-5">
+                <div class="carousel-item active">
+                    <img src="assets/reciennacido1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/reciennacido2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/reciennacido3.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <div>
+                <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselStackedBottom"
+                    data-bs-slide="prev">
+                    <span class="carousel-icon-prev" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselStackedBottom"
+                    data-bs-slide="next">
+                    <span class="carousel-icon-next" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <ul class="footer-ul">
+            <li><a href="https://www.instagram.com/diegosteinberg/">Instagram</a></li>
+            <li>
+                <p>Diego Steinberg - 2026 - Todos los derechos reservados</p>
+            </li>
+        </ul>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
