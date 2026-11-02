@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* fuentes de google fonts (el @import debe ir primero) */
 @import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap");
+
 /* ========== BASE (mobile-first) ========== */
 * {
   margin: 0;
@@ -75,7 +76,7 @@ main {
   width: 100%;
 }
 
-main > section {
+main>section {
   width: 100%;
 }
 
@@ -193,68 +194,94 @@ footer {
     justify-content: space-between;
     padding: 10px 24px;
   }
+
   .logo {
     width: 220px;
   }
+
   main {
     padding: 24px;
   }
+
   h1 {
     font-size: 2.5rem;
   }
+
   h2 {
     font-size: 2rem;
   }
+
   .home-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "hero  hero" "sobre guias" "foto  foto";
   }
+
   .home-foto img {
     margin: 0 auto;
     max-width: 70%;
   }
+
   .guias-grid {
     grid-template-columns: 1fr 1fr;
   }
+
   .footer-ul {
     flex-direction: row;
     justify-content: center;
     gap: 24px;
   }
 }
+
 /* ======== DESKTOP ========== */
 @media (min-width: 1024px) {
   header {
     padding: 10px 48px;
   }
+
   .logo {
     width: 300px;
   }
+
   main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 32px 48px;
     gap: 32px;
   }
+
   h1 {
     font-size: 3.5rem;
   }
+
   h2 {
     font-size: 2.5rem;
   }
+
   .home-grid {
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-areas: "hero  hero  foto" "sobre guias foto";
     gap: 32px;
     align-items: start;
   }
+
   .home-foto img {
     max-width: 100%;
   }
+
+  .carrusel-inner {
+    border-radius: 2rem;
+  }
+
+  .carrusel-img {
+    display: block;
+    width: 100%;
+  }
+
   .guias-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
   }
+
   .guias-foto {
     align-self: center;
   }
