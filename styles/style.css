@@ -277,6 +277,15 @@ footer {
     width: 100%;
   }
 
+  .navbar-fondo {
+    background-color: #f8f9fa;
+  }
+
+  .menu-lista {
+    justify-content: flex-end;
+    flex-grow: 1;
+    padding-right: 1rem;
+  }
 
   .guias-grid {
     grid-template-columns: repeat(3, 1fr);
