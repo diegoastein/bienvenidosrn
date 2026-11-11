@@ -1,0 +1,13 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+@include desktop {
+  .carrusel-inner {
+    border-radius: $radio-carrusel;
+  }
+
+  .carrusel-img {
+    display: block;
+    width: 100%;
+  }
+}

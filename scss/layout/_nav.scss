@@ -1,0 +1,41 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.nav-ul {
+  @include flex-centrado;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 8px 16px;
+  padding: 10px;
+
+  li {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      color: $color-enlace;
+      font-size: 1rem;
+      font-weight: 400;
+      padding: 8px 0;
+      display: inline-block;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $color-primario;
+      }
+    }
+  }
+}
+
+// Personalización de la Navbar de Bootstrap
+@include desktop {
+  .navbar-fondo {
+    background-color: $color-nav-fondo;
+  }
+
+  .menu-lista {
+    justify-content: flex-end;
+    flex-grow: 1;
+    padding-right: 1rem;
+  }
+}

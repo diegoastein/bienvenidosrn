@@ -1,0 +1,28 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+footer {
+  padding: 16px;
+
+  .footer-ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+
+    li a {
+      text-decoration: none;
+      color: $color-enlace;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: center;
+      gap: 24px;
+    }
+  }
+}

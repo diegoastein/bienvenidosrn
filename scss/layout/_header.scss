@@ -1,0 +1,131 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 24px;
+  }
+
+  @include desktop {
+    padding: 10px 48px;
+  }
+
+  .logo {
+    width: 60%;
+    max-width: 260px;
+    max-height: 45px;
+    height: auto;
+
+    @include tablet {
+      width: 220px;
+    }
+
+    @include desktop {
+      width: 300px;
+    }
+  }
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 16px;
+  width: 100%;
+
+  > section {
+    width: 100%;
+  }
+
+  ul {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  @include tablet {
+    padding: 24px;
+  }
+
+  @include desktop {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 48px;
+    gap: 32px;
+  }
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "hero" "sobre" "guias" "foto";
+  gap: 20px;
+
+  .home-foto {
+    grid-area: foto;
+
+    img {
+      @include tablet {
+        margin: 0 auto;
+        max-width: 70%;
+      }
+
+      @include desktop {
+        max-width: 100%;
+      }
+    }
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "hero  hero" "sobre guias" "foto  foto";
+  }
+
+  @include desktop {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas: "hero  hero  foto" "sobre guias foto";
+    gap: 32px;
+    align-items: start;
+  }
+}
+
+.guias-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "intro" "g1" "g2" "g3" "g4" "g5" "foto";
+  gap: 20px;
+
+  .guias-intro {
+    grid-area: intro;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .guias-foto {
+    grid-area: foto;
+
+    @include desktop {
+      align-self: center;
+    }
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}

@@ -1,0 +1,19 @@
+@use "variables" as *;
+
+@mixin tablet {
+  @media (min-width: $bp-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $bp-desktop) {
+    @content;
+  }
+}
+
+@mixin flex-centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

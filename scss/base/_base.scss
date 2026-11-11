@@ -1,0 +1,37 @@
+@use "../utilities/variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $fuente-principal;
+  background-color: $color-fondo;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+article {
+  margin: 0;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+figcaption {
+  color: $color-texto;
+  font-size: 0.9rem;
+  text-align: center;
+}
