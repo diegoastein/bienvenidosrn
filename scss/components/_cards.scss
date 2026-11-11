@@ -1,0 +1,29 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.guias-grid article {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: $color-tarjeta-bg;
+  padding: 16px;
+  border-radius: $radio-tarjeta;
+}
+
+@include desktop {
+  .figura-faq {
+    max-width: 250px;
+    margin: 0 auto;
+    text-align: center;
+
+    img {
+      border-radius: $radio-faq;
+    }
+
+    figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.875em;
+      color: $color-muted;
+    }
+  }
+}
