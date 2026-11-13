@@ -60,15 +60,108 @@
         </nav>
     </header>
 
-    <main>
-        <section>
+    <main class="container my-5">
+        <!-- Encabezado de sección -->
+        <section class="mb-5">
             <h1>Contacto</h1>
-            <p>Si tenés alguna pregunta o necesitás ayuda, no dudes en contactarme.</p>
+            <p class="lead">Si tenés alguna pregunta, sugerencia sobre las guías o necesitás orientación, completá el formulario o utilizá nuestros canales directos.</p>
+        </section>
 
-            <figure class="figura-faq">
-                <img src="../assets/contacto.jpg" alt="Una persona usa un teléfono inteligente, ...">
-                <figcaption>Contacto</figcaption>
-            </figure>
+        <!-- Bloque principal: Formulario + Información e Imagen -->
+        <section class="row g-5 align-items-start mb-5">
+            <!-- Columna Formulario -->
+            <div class="col-12 col-lg-7">
+                <div class="p-4 border rounded-3 bg-light shadow-sm">
+                    <h2 class="h4 mb-4">Envianos tu consulta</h2>
+                    <form action="#" method="post">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre y apellido</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej. María Gómez" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemplo.com" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="motivo" class="form-label">Motivo de contacto</label>
+                            <select class="form-select" id="motivo" name="motivo" required>
+                                <option value="" selected disabled>Seleccioná una opción...</option>
+                                <option value="consulta-guia">Consulta sobre una guía</option>
+                                <option value="sugerencia">Sugerencia de tema nuevo</option>
+                                <option value="colaboracion">Colaboración o proyecto</option>
+                                <option value="otro">Otro motivo</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Escribí acá tu consulta con el mayor detalle posible..." required></textarea>
+                        </div>
+
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="acepto" required>
+                            <label class="form-check-label" for="acepto">
+                                Acepto que mis datos sean utilizados únicamente para responder esta consulta.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary px-4">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Columna Lateral: Imagen + Datos de contacto -->
+            <div class="col-12 col-lg-5">
+                <figure class="figura-faq mb-4">
+                    <img src="../assets/contacto.jpg" alt="Una persona usa un teléfono inteligente para comunicarse" class="img-fluid rounded-3 shadow-sm">
+                    <figcaption class="mt-2 text-muted small">Estamos para acompañarte y resolver tus inquietudes.</figcaption>
+                </figure>
+
+                <div class="p-4 border rounded-3">
+                    <h2 class="h5 mb-3">Otros medios de comunicación</h2>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-3">
+                            <strong>Instagram:</strong><br>
+                            <a href="https://www.instagram.com/diegosteinberg/" target="_blank" rel="noopener noreferrer">@diegosteinberg</a>
+                        </li>
+                        <li class="mb-3">
+                            <strong>Tiempo estimado de respuesta:</strong><br>
+                            Dentro de las 24 a 48 horas hábiles.
+                        </li>
+                        <li>
+                            <strong>Nota importante:</strong><br>
+                            Este espacio es de carácter informativo y educativo. Ante cualquier urgencia médica, acudí siempre a la guardia o centro de salud más cercano.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bloque inferior para dar cierre y recorrido natural -->
+        <section class="pt-4 border-top">
+            <h2 class="h4 mb-4">Antes de escribirnos, quizás te sirva revisar:</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Guías prácticas</h3>
+                            <p class="card-text">Explorá nuestro material paso a paso con recomendaciones claras y actualizadas para el cuidado del recién nacido.</p>
+                            <a href="guias.html" class="btn btn-outline-primary btn-sm">Ir a las guías</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Preguntas frecuentes</h3>
+                            <p class="card-text">Respondemos las dudas más habituales de las familias durante los primeros días y semanas en casa.</p>
+                            <a href="preguntas-frecuentes.html" class="btn btn-outline-primary btn-sm">Ver preguntas frecuentes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
