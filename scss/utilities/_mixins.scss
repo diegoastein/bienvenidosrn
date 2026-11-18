@@ -17,3 +17,12 @@
   justify-content: center;
   align-items: center;
 }
+
+// Mixin con parámetros para transiciones suaves y elevación al hacer hover
+@mixin interaccion-sutil($propiedad: transform, $duracion: 0.3s, $desplazamiento: -4px) {
+  transition: $propiedad $duracion ease, box-shadow $duracion ease;
+
+  &:hover {
+    transform: translateY($desplazamiento);
+  }
+}
